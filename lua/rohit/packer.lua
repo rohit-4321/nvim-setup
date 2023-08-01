@@ -6,6 +6,13 @@ return require('packer').startup(function(use)
 		'nvim-telescope/telescope.nvim', tag = '0.1.2',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
+  use {
+    'rmagatti/goto-preview',
+    config = function()
+       require('goto-preview').setup {}
+    end
+  }
+	use "catppuccin/nvim" 
 	use {
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v2.x',
