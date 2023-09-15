@@ -12,7 +12,12 @@ return require('packer').startup(function(use)
        require('goto-preview').setup {}
     end
   }
-	use "catppuccin/nvim" 
+	use "catppuccin/nvim"
+  use "lewis6991/gitsigns.nvim"
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
 	use {
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v2.x',
